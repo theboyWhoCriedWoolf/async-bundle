@@ -1,0 +1,10 @@
+{
+  "presets": [
+      ["env", {"es2015": {"modules": false}, "targets": { "node": "6" }} ],
+      "stage-0",
+      "react"
+  ],
+  "plugins": [
+    "transform-class-properties", "transform-es2015-classes", "dynamic-import-node"
+  ]
+}

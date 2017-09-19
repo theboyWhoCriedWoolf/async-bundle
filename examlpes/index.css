@@ -1,0 +1,55 @@
+
+/*'#E3EB64', '#A7EBCA', '#FFFFFF', '#D8EBA7', '#868E80'*/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+.root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.root {
+    background-color: #EDB948;
+}
+
+h1 {
+    display: none;
+}
+
+nav {
+    z-index: 10;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+}
+
+nav a {
+    margin: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #384E4D;
+    border: 1px solid #384E4D;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 100ms all ease-out;
+}
+
+nav a:hover, a.active {
+    background-color: #384E4D;
+    color: white;
+}
+
+nav a.active {
+    pointer-events: none;
+}

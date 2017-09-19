@@ -1,0 +1,9 @@
+
+
+.sqaures {
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}

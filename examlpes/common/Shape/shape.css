@@ -1,0 +1,22 @@
+
+
+@keyframes move {
+  100% {
+    /*transform: translate3d(0, 0, 1000px);*/
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.shape {
+    position: absolute;
+    display: block;
+    transition-property: all;
+    opacity: 0.9;
+    animation: move 3s infinite;
+}
+
+.shape.circle {
+    border-radius: 50%;
+}
