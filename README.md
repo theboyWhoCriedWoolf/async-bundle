@@ -24,7 +24,7 @@ Dynamically load your saga's as and when you need them
 ## Getting started
 
 <a name="install"></a>
-## Install
+### Install
 Using npm:
 ```
 $ npm install async-bundle --save
@@ -34,7 +34,7 @@ Using yarn:
 $ yarn add async-bundle
 ```
 <a name="quickStart"></a>
-## Quick start
+### Quick start
 
 #### Code splitting
 AsyncBundle provides several ways to split up your code and asynchronously load in your modules. The easiest way is by passing your imports to the load prop of the bundle.
@@ -75,3 +75,6 @@ class App extends React.Component {
 ## Issues
 
 If you find a bug, please file an issue on [our issue tracker on GitHub](https://github.com/theboyWhoCriedWoolf/async-bundle/issues).
+
+## Contribution
+Please feel free to contribute or provide improvements.
