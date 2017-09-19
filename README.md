@@ -4,6 +4,12 @@ Based on [React Router 4](https://reacttraining.com/react-router/web/guides/code
 
 **AsyncBundle** helps you scale your application and improve load time by providing an easy way to split your code into various bundles, which can then be loaded in on demand. Giving you complete flexibility in the way that you load in your async modules. Not just with regards to the import tools you can use, but also how you structure your code within your application.
 
+## Documentation
+- [AsyncBundle](docs/asyncBundle.md)
+- [AsyncRoute](docs/asyncRoute.md)
+- [Splitting Reducers](docs/redux.md)
+- [Splitting Sagas](docs/sagas.md)
+
 ## Features
 
 **Code Splitting** -
@@ -12,7 +18,7 @@ Easily split your application into dynamically loaded chunks, using either [ES6 
 **Inject asynchronously loaded reducers** -
 Split your store's state into easily maintainable chunks, loading only what you need for each route.
 
-**Inject asynchronously loaded saga's** - 
+**Inject asynchronously loaded saga's** -
 Dynamically load your saga's as and when you need them
 
 ## Getting started
@@ -65,13 +71,6 @@ class App extends React.Component {
     }
 }
 ```
-
-## Documentation
-- [AsyncBundle](docs/asyncBundle.md)
-- [AsyncRoute](docs/asyncRoute.md)
-- [Splitting Reducers](docs/redux.md)
-- [Splitting Sagas](docs/sagas.md)
-
 
 ## Issues
 
