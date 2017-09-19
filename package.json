@@ -1,5 +1,5 @@
 {
-  "name": "AsyncBundle",
+  "name": "async-bundle",
   "version": "0.0.1",
   "description": "Asynchronous loading and code splitting for for React Router 4",
   "main": "lib/index.js",
@@ -7,13 +7,16 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development babel-node devServer.js",
+    "compile:min": "uglifyjs dist/asyncBundle.js -mt -o dist/asyncBundle.min.js",
+    "compile:umd": "mkdirp dist/ && babel -o dist/asyncBundle.js src/",
+    "compile:commonjs": "babel -d lib/ src/",
+    "compile": "npm run compile:commonjs && npm run compile:umd && npm run compile:min",
     "lint": "eslint src/**",
     "test-dev": "jest --watchAll",
     "test": "jest",
-    "clean": "rimraf lib",
+    "clean": "rimraf lib && rimraf dist",
     "webpack": "NODE_ENV=development webpack",
-    "prebuild": "npm run clean",
-    "publish": "babel src --out-dir lib"
+    "prepublish": "npm run clean && npm run compile"
   },
   "bugs": {
     "url": ""
@@ -79,6 +82,7 @@
     "fast-async": "^6.3.0",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^20.0.4",
+    "mkdirp": "^0.5.1",
     "react": "^15.0.0",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
@@ -93,6 +97,7 @@
     "redux-saga": "^0.15.6",
     "rimraf": "^2.6.2",
     "style-loader": "^0.18.2",
+    "uglify-es": "^3.1.1",
     "webpack": "^3.5.5",
     "webpack-dev-middleware": "^1.12.0",
     "whatwg-fetch": "^2.0.3"
