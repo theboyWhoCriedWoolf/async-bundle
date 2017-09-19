@@ -2,14 +2,19 @@
 
 Splitting Sagas is based on [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate) and is implemented in a similar way to [splitting reducers](redux.md).
 
+### Setting up your async sagas
+ - [Index page](#index)
+ - [Creating your store](#createStore)
+ - [Saga generators](#exampleSagas)
+ - [Preventing generator duplication](#preventDuplication)
+
 Loading Sagas asynchronously is done by passing Saga generators into Saga's run method at runtime for each route. For more information on redux-saga, please see their [documentation](https://redux-saga.js.org/).
 
 AsyncBundle expects you to have provided sagas.run to your store which it then uses to map your reducers to once they have loaded.
 
 You generally must also provide `createReducer` as you will need to handle actions dispatched from redux-saga.
 
-### Setting up your Sagas
-
+<a name="index"></a>
 #### index
 ```js
 // index.js
@@ -28,7 +33,7 @@ const Bundle = AsyncBundle(store, createReducer);
 <Route exact path="/" render={() => <Bundle name="about" load={[ import('./containers/About'), null, import('./sagas/AboutSagas') ]} />} />
 
 ```
-
+<a name="createStore"></a>
 #### createStore
 However you define your store and setup sagas, you must pass `sagas.run` to `store.runSaga` to make it available in AsyncBundle.
 
@@ -58,7 +63,7 @@ export default function configureStore(history) {
     return store;
 }
 ```
-
+<a name="exampleSagas"></a>
 #### ExampleSaga.js
 Note that the example uses [react-router-redux](https://github.com/reactjs/react-router-redux) in order to suspend/cancel the saga generator in between routes.
 
@@ -91,7 +96,7 @@ export default [
     mySaga
 ];
 ```
-
+<a name="preventDuplication"></a>
 ### Preventing generator duplication
 If you are looking to use Sagas but not [react-router-redux](https://github.com/reactjs/react-router-redux), you can avoid duplication by adding `store.asyncSagas` to your store. By doing this, AsyncBundle will store your generators using the name prop provided and will make sure its only added once.
 

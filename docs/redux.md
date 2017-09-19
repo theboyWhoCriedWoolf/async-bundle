@@ -1,20 +1,26 @@
 # Splitting Reducers
 Based on [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate), AsyncBundle allows you to inject imported async reducers at runtime providing route based state data.
 
+### Setting up your async reducers
+ - [Index page](#index)
+ - [Reducer](#reducer)
+ - [Defining your store](#createStore)
+ - [CreateReducer](#createReducer)
+
 AsyncBundle injects reducers per route using redux's `store.replaceReducer`. Once a reducer is loaded, AsyncBundle injects the new reducer into the store using your  `createReducer` method keeping any global reducers. The name provided to each Bundle will provide the key in which to access your route specific data in the state.
+
+<a name="index"></a>
+#### Index
 
 To enable this functionality and split your redux state you must provide the following when defining your AsyncBundle:
  - Name
  - Redux store
  - Create reducer function
 
-#### Index
 ```js
 // index.js
 import { AsyncBundle } from '../src/index';
 import { Route } from 'react-router-dom';
-
-createReducer
 
 const store = createStore(history);
 // createReducer returns root reducers with async reducers
@@ -24,7 +30,9 @@ const Bundle = AsyncBundle(store, createReducer);
 <Route exact path="/" render={() => <Bundle name="about" load={[ import('./containers/About'), import('./reducers/AboutReducer')]} />} />
 ```
 
-#### AboutReducer
+<a name="reducer"></a>
+#### Reducer
+
 ```js
 //AboutReducer.js
 import { createReducer } from 'redux-create-reducer';
@@ -37,6 +45,7 @@ export default createReducer({}, {
 });
 ```
 
+<a name="createStore"></a>
 #### CreateStore
 The createStore method simple creates your redux store. Please see redux documentation for further details.
 
@@ -65,7 +74,11 @@ export default function configureStore(history) {
 }
 ```
 
+<a name="createReducer"></a>
 #### CreateReducer
+
+CreateReducer must be supplied when instantiating AsyncBundle in order to make sure root reducers are correctly handled when replacing reducers for each route.
+
 ```js
 import { combineReducers } from 'redux';
 import { createReducer } from 'redux-create-reducer';
