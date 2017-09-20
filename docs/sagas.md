@@ -10,7 +10,7 @@ Splitting Sagas is based on [react-boilerplate](https://github.com/react-boilerp
 
 Loading Sagas asynchronously is done by passing Saga generators into Saga's run method at runtime for each route. For more information on redux-saga, please see their [documentation](https://redux-saga.js.org/).
 
-AsyncBundle expects you to have provided sagas.run to your store which it then uses to map your reducers to once they have loaded.
+`async-bundle` expects you to have provided sagas.run to your store which it then uses to map your reducers to once they have loaded.
 
 You generally must also provide `createReducer` as you will need to handle actions dispatched from redux-saga.
 
@@ -18,7 +18,7 @@ You generally must also provide `createReducer` as you will need to handle actio
 #### index
 ```js
 // index.js
-import { AsyncRoute } from '../src/index';
+import { AsyncRoute } from 'async-bundle';
 import { Route } from 'react-router-dom';
 
 import createReducer from './reducer';
@@ -35,7 +35,7 @@ const Bundle = AsyncBundle(store, createReducer);
 ```
 <a name="createStore"></a>
 #### createStore
-However you define your store and setup sagas, you must pass `sagas.run` to `store.runSaga` to make it available in AsyncBundle.
+However you define your store and setup sagas, you must pass `sagas.run` to `store.runSaga` to make it available in `async-bundle`.
 
 ```js
 import { createStore, applyMiddleware } from 'redux';
@@ -98,7 +98,7 @@ export default [
 ```
 <a name="preventDuplication"></a>
 ### Preventing generator duplication
-If you are looking to use Sagas but not [react-router-redux](https://github.com/reactjs/react-router-redux), you can avoid duplication by adding `store.asyncSagas` to your store. By doing this, AsyncBundle will store your generators using the name prop provided and will make sure its only added once.
+If you are looking to use Sagas but not [react-router-redux](https://github.com/reactjs/react-router-redux), you can avoid duplication by adding `store.asyncSagas` to your store. By doing this, `async-bundle` will store your generators using the name prop provided and will make sure its only added once.
 
 ```js
 /*

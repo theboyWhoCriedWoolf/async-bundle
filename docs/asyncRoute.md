@@ -1,11 +1,11 @@
 # Using AsyncRoute
 
-AsyncRoute is a HOC *(higher order component)* that was born out of pure laziness. It enables you to pass your Bundle directly into the *component/render* prop of React Router.
+`AsyncRoute` is a HOC *(higher order component)* that was born out of pure laziness. It enables you to pass your Bundle directly into the *component/render* prop of React Router.
 
 
-Instead of passing in a function as you would with AsyncBundle:
+Instead of passing in a function as you would with `AsyncBundle`:
 ```js
-import { AsyncBundle } from '../src/index';
+import { AsyncBundle } from 'async-bundle';
 
 const Bundle = AsyncBundle();
 // Pass in Bundle to component prop
@@ -14,7 +14,7 @@ const Bundle = AsyncBundle();
 
 With AsyncRoute you can pass pass in the component and props directly:
 ```js
-import { AsyncRoute } from '../src/index';
+import { AsyncRoute } from 'async-bundle';
 
 // Pass in Bundle to component prop
 const Bundle = AsyncRoute();

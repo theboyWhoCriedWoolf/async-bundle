@@ -1,6 +1,6 @@
 # AsyncBundle
 
-AsyncBundle takes a prop called * load * that defines its async modules. Once the component mounts or a new load prop is defined, it calls load, loading each import placing the value in state. Finally, it calls back in render with the module or renders the module directly.
+`AsyncBundle` takes a prop called * load * that defines its async modules. Once the component mounts or a new load prop is defined, it calls load, loading each import placing the value in state. Finally, it calls back in render with the module or renders the module directly.
 
 ## Options
 The *load* prop accepts either an array or an object.
@@ -9,9 +9,9 @@ The *load* prop accepts either an array or an object.
 - `load={{ comp, reducer, sagas }}`
 
 ### Loading components
-Probably the easiest way to load in your async components is by passing your import directly to the * load * prop of AsyncBundle, either using an array or an object.
+Probably the easiest way to load in your async components is by passing your import directly to the * load * prop of `AsyncBundle`, either using an array or an object.
 
-Please refer to [Splitting Reducers](redux.md) and [Splitting Sagas](sagas.md) for more information about providing extra parameters into your AsyncBundle.
+Please refer to [Splitting Reducers](redux.md) and [Splitting Sagas](sagas.md) for more information about providing extra parameters into your `AsyncBundle`.
 
 - [Using an Array](#usingArray)
 - [Using an Object](#usingObject)

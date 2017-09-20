@@ -1,5 +1,5 @@
 # Splitting Reducers
-Based on [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate), AsyncBundle allows you to inject imported async reducers at runtime providing route based state data.
+Based on [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate), `async-bundle` allows you to inject imported async reducers at runtime providing route based state data.
 
 ### Setting up your async reducers
  - [Index page](#index)
@@ -7,19 +7,19 @@ Based on [react-boilerplate](https://github.com/react-boilerplate/react-boilerpl
  - [Defining your store](#createStore)
  - [CreateReducer](#createReducer)
 
-AsyncBundle injects reducers per route using redux's `store.replaceReducer`. Once a reducer is loaded, AsyncBundle injects the new reducer into the store using your  `createReducer` method keeping any global reducers. The name provided to each Bundle will provide the key in which to access your route specific data in the state.
+`async-bundle` injects reducers per route using redux's `store.replaceReducer`. Once a reducer is loaded, `async-bundle` injects the new reducer into the store using your  `createReducer` method keeping any global reducers. The name provided to each Bundle will provide the key in which to access your route specific data in the state.
 
 <a name="index"></a>
 #### Index
 
-To enable this functionality and split your redux state you must provide the following when defining your AsyncBundle:
+To enable this functionality and split your redux state you must provide the following when defining your `async-bundle`:
  - Name
  - Redux store
  - Create reducer function
 
 ```js
 // index.js
-import { AsyncBundle } from '../src/index';
+import { AsyncBundle } from 'async-bundle';
 import { Route } from 'react-router-dom';
 
 const store = createStore(history);
@@ -49,7 +49,7 @@ export default createReducer({}, {
 #### CreateStore
 The createStore method simple creates your redux store. Please see redux documentation for further details.
 
-To give you more control over your async reducers, you should create a global object within your redux store called asyncReducers. However if you do not this is automatically done within AsyncBundle.
+To give you more control over your async reducers, you should create a global object within your redux store called asyncReducers. However if you do not this is automatically done within `async-bundle`.
 
 
 ```js
@@ -77,7 +77,7 @@ export default function configureStore(history) {
 <a name="createReducer"></a>
 #### CreateReducer
 
-CreateReducer must be supplied when instantiating AsyncBundle in order to make sure root reducers are correctly handled when replacing reducers for each route.
+CreateReducer must be supplied when instantiating `async-bundle` in order to make sure root reducers are correctly handled when replacing reducers for each route.
 
 ```js
 import { combineReducers } from 'redux';
