@@ -1,6 +1,6 @@
 {
   "name": "async-bundle",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Asynchronous loading and code splitting for for React Router 4",
   "main": "lib/index.js",
   "author": "Tal Woolf <tal@theboywhocriedwoolf.com>",
