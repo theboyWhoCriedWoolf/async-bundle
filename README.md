@@ -6,7 +6,7 @@
 Code splitting for React, Redux and Redux-Saga.
 Based on [React Router 4](https://reacttraining.com/react-router/web/guides/code-splitting) and [React Boilerplate](https://reacttraining.com/react-router/web/guides/code-splitting).
 
-**AsyncBundle** helps you scale your application and improve load time by providing an easy way to split your code into various bundles, which can then be loaded in on demand. Giving you complete flexibility in the way that you load in your async modules. Not just with regards to the import tools you can use, but also how you structure your code within your application.
+`async-bundle` helps you scale your application and improve load time by providing an easy way to split your code into various bundles, which can then be loaded in on demand. Giving you complete flexibility in the way that you load in your async modules. Not just with regards to the import tools you can use, but also how you structure your code within your application.
 
 ## Features
 
