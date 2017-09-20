@@ -108,6 +108,7 @@ class App extends React.Component {
 - [AsyncRoute](https://github.com/theboyWhoCriedWoolf/async-bundle/blob/master/docs/asyncRoute.md)
 - [Splitting Reducers](https://github.com/theboyWhoCriedWoolf/async-bundle/blob/master/docs/redux.md)
 - [Splitting Sagas](https://github.com/theboyWhoCriedWoolf/async-bundle/blob/master/docs/sagas.md)
+- [Running the example code](https://github.com/theboyWhoCriedWoolf/async-bundle/blob/master/docs/example.md)
 - [Optimisations with babel](https://github.com/theboyWhoCriedWoolf/async-bundle/blob/master/docs/optimise.md)
 
 
