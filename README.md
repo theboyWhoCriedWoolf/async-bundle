@@ -1,5 +1,8 @@
 # async-bundle
 
+[![npm version](https://img.shields.io/npm/v/async-bundle.svg)](https://www.npmjs.com/package/async-bundle)
+[![npm](https://img.shields.io/npm/dm/async-bundle.svg)](https://www.npmjs.com/package/async-bundle)
+
 Code splitting for React, Redux and Redux-Saga.
 Based on [React Router 4](https://reacttraining.com/react-router/web/guides/code-splitting) and [React Boilerplate](https://reacttraining.com/react-router/web/guides/code-splitting).
 
@@ -52,7 +55,7 @@ $ yarn add async-bundle
 
 ```js
 /**
- * load property as array (order must be as specified)
+ * load property as object passing in correctly names keys
  */
 <Bundle load={{
     comp,
