@@ -1,6 +1,6 @@
 {
   "name": "async-bundle",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Asynchronous code splitting for React, Redux and Redux-Saga",
   "main": "lib/index.js",
   "author": "Tal Woolf <tal@theboywhocriedwoolf.com>",
