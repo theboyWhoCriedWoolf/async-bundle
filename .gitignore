@@ -6,3 +6,14 @@ dist
 *.log
 tmp
 babel-preset-env-*.tgz
+.*.swp
+._*
+.git
+.hg
+.npmrc
+.lock-wscript
+.svn
+.wafpickle-*
+config.gypi
+CVS
+npm-debug.log

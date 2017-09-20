@@ -1,6 +1,6 @@
 {
   "name": "async-bundle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Asynchronous loading and code splitting for for React Router 4",
   "main": "lib/index.js",
   "author": "Tal Woolf <tal@theboywhocriedwoolf.com>",
@@ -19,7 +19,7 @@
     "prepublish": "npm run clean && npm run compile"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/theboyWhoCriedWoolf/async-bundle/issues"
   },
   "dependencies": {
     "invariant": "^2.2.2",

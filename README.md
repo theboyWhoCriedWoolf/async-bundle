@@ -34,14 +34,14 @@ Using yarn:
 $ yarn add async-bundle
 ```
 <a name="quickStart"></a>
-### Quick start
+## Quick start
 
 #### Code splitting
 AsyncBundle provides several ways to split up your code and asynchronously load in your modules. The easiest way is by passing your imports to the load prop of the bundle.
 
 Once the Bundle resolves your imported component it updates the state internally and renders the component.
 
-You can use either the * component or render * prop of React's Route component. Please refer to the [React Router docs](https://reacttraining.com/react-router/web/api/Route/component) for further information.
+You can use either the *component or render* prop of React's Route component. Please refer to the [React Router docs](https://reacttraining.com/react-router/web/api/Route/component) for further information.
 
 ```js
 import React from 'react';
