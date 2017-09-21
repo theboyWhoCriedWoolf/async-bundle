@@ -9,7 +9,7 @@ The *load* prop accepts either an array or an object.
 - `load={{ comp, reducer, sagas }}`
 
 ### Loading components
-Probably the easiest way to load in your async components is by passing your import directly to the * load * prop of `AsyncBundle`, either using an array or an object.
+Probably the easiest way to load in your async components is by passing your import directly to the *load* prop of `AsyncBundle`, either using an array or an object.
 
 Please refer to [Splitting Reducers](redux.md) and [Splitting Sagas](sagas.md) for more information about providing extra parameters into your `AsyncBundle`.
 

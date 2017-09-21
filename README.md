@@ -81,7 +81,7 @@ import { Route } from 'react-router-dom';
 
 // Initialise your Bundle
 const Bundle = AsyncBundle();
-// Initialise your Bundle using AsyncRoute, a HOC for AsyncBundle
+// Initialise your Bundle using AsyncRoute, a higher order component for AsyncBundle
 const RouteBundle = AsyncRoute();
 
 class App extends React.Component {
@@ -96,7 +96,7 @@ class App extends React.Component {
                 <Route path="/dashboard" component={() => <Bundle load={[import('./Dashboard')]} />} />
                 // load component using bundle-loader
                 // pass in RouteBundle directly without having to define a function
-                <Route path="/about" component={RouteBundle({comp: import('./Dashboard')})} />
+                <Route path="/about" component={RouteBundle({comp: import('./about')})} />
             </div>
         )
     }
