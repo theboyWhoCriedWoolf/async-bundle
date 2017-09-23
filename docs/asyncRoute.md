@@ -12,7 +12,7 @@ const Bundle = AsyncBundle();
 <Route exact path="/about" component={ () => <Bundle load={[ import('./components/About') ]}} /> } />
 ```
 
-With AsyncRoute you can pass pass in the component and props directly:
+With AsyncRoute you can pass in the component and props directly:
 ```js
 import { AsyncRoute } from 'async-bundle';
 
